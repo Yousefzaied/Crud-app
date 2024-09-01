@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/crud.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+</head>
+<body>
+ 
+    <div class="crud  m-auto">
+        <!-- start-head -->
+        <div class="head text-center text-uppercase mt-5 mb-5">
+            <h2>crud</h2>
+            <p>product management system</p>
+        </div>
+          <!-- end-head -->
+           <!-- start-inputs -->
+        <div class="inputs">
+            <input class="mt-2 mb-2 rounded-pill p-4" placeholder="titile" type="text" id="titile">
+            <div class="price">
+                <input onkeyup="getTotal()" class="mt-2 mb-2 rounded-pill p-4" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" class="mt-2 mb-2 rounded-pill p-4" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" class="mt-2 mb-2 rounded-pill p-4" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" class="mt-2 mb-2 rounded-pill p-4" type="number" id="discount" placeholder="discount">
+                <small class="p-2 rounded-pill" id="total"></small>
+            </div>
+            <input class="mt-2 mb-2 rounded-pill p-4" placeholder="count" type="number" id="count">
+            <input class="mt-2 mb-2 rounded-pill p-4" placeholder="category" type="text" id="category">
+            <button class="mt-2 mb-2 rounded-pill bg-primary text-light" id="submit">Create</button>
+        </div>
+         <!-- start-inputs -->
+          <!-- start-ouputs -->
+        <div class="outputs">
+           <div class="search">
+            <input onkeyup="searchData(this.value)" class="mt-2 mb-2 rounded-pill p-4" type="search" id="search" placeholder="search">
+            <div class="btnSearch d-flex justify-content-between">
+                <button onclick="getSearchMood(this.id)" class="bg-primary text-light" id="title"> Search By Title</button>
+                <button onclick="getSearchMood(this.id)" class="bg-primary text-light" id="category"> Search By Catecory</button>
+            </div>
+           </div>
+           <table class="text-center mt-5 mb-5">
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>price</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>dlelete</th>
+            </tr>
+            <tbody id="tbody">
+                
+            </tbody>
+           </table>
+        </div>
+        <!-- start-ouputs -->
+    </div>
+    <script src="js/crud.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
